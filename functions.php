@@ -14,7 +14,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 
 //Optional: Set the branch that contains the stable release.
 // $myUpdateChecker->setBranch('master');
-// $myUpdateChecker->getVcsApi()->enableReleaseAssets();
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 /*
 * Post Types for projects and events
 */
