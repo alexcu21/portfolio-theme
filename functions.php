@@ -7,14 +7,14 @@
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/alexcu21/portfolio-theme',
+	'https://github.com/alexcu21/portfolio-theme/',
 	__FILE__,
 	'portfolio-theme'
 );
 
 //Optional: Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('master');
-$myUpdateChecker->getVcsApi()->enableReleaseAssets();
+// $myUpdateChecker->setBranch('master');
+// $myUpdateChecker->getVcsApi()->enableReleaseAssets();
 /*
 * Post Types for projects and events
 */
