@@ -12,11 +12,9 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'portfolio-theme'
 );
 
-$myUpdateChecker->getVcsApi()->enableReleaseAssets();
-
 //Optional: Set the branch that contains the stable release.
-//$myUpdateChecker->setBranch('master');
-
+$myUpdateChecker->setBranch('master');
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 /*
 * Post Types for projects and events
 */
