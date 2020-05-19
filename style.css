@@ -1,0 +1,380 @@
+/*
+    Theme Name: Alex Cuadra Portfolio
+    Theme URI:
+    Author: Alex Cuadra
+    Author URI:
+    Description: Theme for Alex Cuadra portfolio, made with bootstrap, CMB2 and fontawesome
+    Version: 1.2
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Text Domain: alexportfolio
+*/
+
+/* importing sass */
+/* fonts */
+/* Colors */
+/* sizes */
+/* importing fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Raleway:400,700,900|Roboto");
+/* base styles */
+body {
+  color: #30424E;
+  font-family: 'Roboto';
+}
+
+nav {
+  background-color: #2980b9;
+  box-shadow: 0px 5px 18px #30424E;
+}
+
+a {
+  color: #00BC62;
+}
+
+a:hover{
+  color: #048949;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway';
+}
+
+h2 {
+  width: 100%;
+  background-color: #2980b9;
+  color: #ffffff;
+  padding: 0.7rem 0;
+  box-shadow: 0px 5px 18px #30424E;
+  margin-top: 6rem!important;
+}
+
+header {
+    height: 100%;
+}
+
+.btn-primary {
+  background-color: #00BC62;
+  border-color: transparent;
+}
+
+.badge-primary {
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem;
+  background-color: #00BC62;
+}
+
+.fixed-top{
+  top:auto;
+}
+
+/*******************************************
+*               mixins                  ***
+******************************************/
+.navbar {
+  background-color: #2980b9;
+  color: #ffffff !important;
+  text-align: center;
+}
+
+.navbar .fas {
+  color: #ffffff;
+}
+
+.navbar a {
+  color: #ffffff;
+}
+
+.navbar a:hover {
+  color: #00BC62;
+}
+
+.hero {
+  padding-top: 10rem;
+  height: 70vh;
+  background-color: #2980b9;
+  text-align: center;
+  margin-bottom: 9rem;
+  /***************/
+  /* responsive */
+}
+
+.hero .copy {
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.hero .copy span {
+  color: #00BC62;
+}
+
+.hero .photohero {
+  height: 330px;
+  max-height: 100%;
+  background-image: url("../images/hero.jpg");
+  background-color: #2980b9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
+  clip-path: polygon(0 31%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* .hero .photohero::after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 100%);
+  background-size: cover;
+  margin-top: 80px;
+  height: 250px;
+  width: 100%;
+} */
+
+.hero .photohero figcaption {
+  position: relative;
+  bottom: -30rem;
+  color: #ffffff;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 576px) {
+  .hero {
+    align-items: center;
+    padding-top: 0;
+    background: #2980b9;
+    margin-bottom: 1rem;
+  }
+  .hero .copy-cont {
+    width: 50%;
+  }
+  .hero .copy-cont .copy {
+    max-width: 90%;
+    padding: 2rem;
+  }
+  .hero .container-fluid {
+    height: 100%;
+  }
+  .hero .container-fluid .row {
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .hero .photohero {
+    display: block;
+    height: 100%;
+    flex-grow: 2;
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    background-position: center left -150px;
+    box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .hero .photohero::after {
+    margin-top: 80%;
+  }
+  .hero .photohero figcaption {
+    bottom: -28rem;
+    width: 70%;
+    font-size: 0.8rem;
+    right: -20%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero .photohero {
+    background-position: center left -80px;
+  }
+}
+
+
+.blog .card {
+  margin: 1rem auto;
+}
+
+.blog .card .card-text {
+  margin-bottom: 0.2rem;
+}
+
+.blog .card .card-text strong {
+  font-size: 100%;
+}
+
+.blog .card h3 {
+  font-family: 'Raleway';
+}
+
+.portfolio .card {
+  margin: 1rem auto;
+}
+
+.portfolio .btn-primary:hover {
+  background-color: #048949;
+  color: #ffffff;
+}
+
+.event .card {
+  margin: 1rem auto;
+  padding: 0.5rem;
+}
+
+.skills .skills1, .skills .skills2 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills img {
+  clip-path: circle(50% at 50% 50%);
+}
+
+footer {
+  height: 40vh;
+  background-color: #2980b9;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+footer .social a {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/**
+ * last css after compilation
+ */
+
+.featured-image{
+  height: 24rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured {
+    margin-top: -5rem;
+}
+.no-featured {
+    margin-top: 0!important;
+    border: none;
+}
+
+.main-content {
+    border: 1px solid #e1e1e1;
+    position: relative;
+    z-index: 100;
+    margin-bottom: 2rem;
+}
+
+.current_page_item{
+  border-bottom: 2px solid #ffffff;
+}
+.current_page_item .nav-link{
+  font-weight: bold;
+}
+
+/*
+* COMMENTS
+ */
+
+
+ .comment-respond a {
+     color: #00BC62;
+ }
+ .comment-body {
+     background-color: #E8E8E8;
+     padding: 1rem;
+     margin-bottom: 1rem;
+ }
+ .comment-body a {
+     color: black;
+ }
+ .comment-body a:hover {
+     color: #00BC62;
+ }
+ .comment-reply-title {
+     text-align: center;
+ }
+ .comment-form-comment label {
+     width: 100%;
+     font-weight: bold;
+ }
+ .comment-form-comment textarea {
+     width: 100%;
+ }
+ .comment-respond .submit {
+     background-color: #00BC62;
+     color: white;
+     font-weight: bold;
+     text-transform: uppercase;
+     border: none;
+     padding: .5rem;
+     transition: background-color .3s ease-in;
+     width:100%;
+ }
+ .comment-respond .submit:hover {
+     background-color: #048949;
+     cursor: pointer;
+ }
+ #respond form > p {
+     display: flex;
+     flex-wrap: wrap;
+ }
+ #respond form > p label{
+     flex: 0 0 200px;
+     font-weight: bold;
+ }
+ #respond form > p input {
+     flex:1;
+ }
+ .comments-closed.alert-danger {
+     background-color: #f46669;
+     color: white;
+ }
+
+ .comments-list ul, li{
+   list-style-type: none;
+ }
+
+ .btn-primary:hover{
+   background-color: #048949;
+ }
+
+.skills img{
+  margin-top: auto 10px;
+}
+
+.bg-primary{
+  background-color: #2980b9!important;
+  color: #ffffff;
+}
+
+.bg-primary a{
+  color: #ffffff;
+}
+
+.bg-primary a:hover{
+  color: #00BC62;
+}
+
+.widget li{
+  margin-top: 1rem;
+}
+
+footer .text-center{
+  font-size: 1.5rem;
+}
+
+.bg-main{
+  background-color: #2980b9;
+}
