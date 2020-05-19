@@ -5,7 +5,7 @@
 <section class="blog">
 
 		<div class="container">
-			<h2 class="text-center">Latest Posts </h2>
+			<h2 class="text-center">What's new </h2>
       <div class="row">
         <div class="col-md-8">
           <div class="row">
